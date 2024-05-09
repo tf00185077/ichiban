@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Ichiban from "@/pages/ichiban/index.tsx";
-import Login from "@/pages/login/index.tsx";
+import Ichiban from "@/pages/ichiban/index";
+import Login from "@/pages/login/index";
 const router = createBrowserRouter([
   {
     path: "/",
