@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    background-image: url('@/assets/pic/hanabi.png');
+}
+.header-text-shadow {
+    text-shadow: 0 0 5px #dc8100;
+}
