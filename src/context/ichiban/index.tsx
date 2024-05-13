@@ -1,16 +1,16 @@
 import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 
-interface IChiBanState {
+export type IChiBanState = {
     selectedStatus: string;
     selectedManufacturer: string;
     searchKeyword: string;
 }
-type IChiBanAction = 
+export type IChiBanAction = 
     | { type: 'UPDATE_STATUS'; payload: string }
     | { type: 'UPDATE_MANUFACTURER'; payload: string }
     | { type: 'UPDATE_KEYWORD'; payload: string }
     | { type: 'RESET' };
-interface IChiBanContextType {
+export type IChiBanContextType = {
     state: IChiBanState;
     dispatch: React.Dispatch<IChiBanAction>;
 }
@@ -20,15 +20,10 @@ const initialState = {
     selectedManufacturer: '',
     searchKeyword: ''
 };    
-
-
 const IChiBanContext = createContext<IChiBanContextType>({
     state: initialState,
     dispatch: defaultDispatch,
 });
-
-
-
 
 function reducer(state: IChiBanState, action: IChiBanAction): IChiBanState {
     switch (action.type) {
@@ -41,17 +36,16 @@ function reducer(state: IChiBanState, action: IChiBanAction): IChiBanState {
         case 'RESET':
             return initialState;
         default:
-            throw new Error();
+            throw new Error(`Unhandled action `);
     }
 }
-
 
 interface IChiBanProviderProps {
     children: ReactNode;
 }
 
 export const IChiBanProvider = ({ children }: IChiBanProviderProps) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState); 
 
     return (
         <IChiBanContext.Provider value={{ state, dispatch }}>
@@ -59,7 +53,6 @@ export const IChiBanProvider = ({ children }: IChiBanProviderProps) => {
         </IChiBanContext.Provider>
     );
 };
-
 export const useIchiBanContext = () => {
     return useContext(IChiBanContext);
 };

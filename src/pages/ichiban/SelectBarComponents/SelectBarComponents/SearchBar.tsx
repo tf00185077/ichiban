@@ -1,14 +1,12 @@
 import { useEffect } from "react"
-import { useIchiBanContext } from "@/context/ichiban";
-
+import { useIchiBanContext, IChiBanState, IChiBanAction } from "@/context/ichiban";
 export const SearchBar = () => {
-    const { state, dispatch } = useIchiBanContext(); 
-
+    const { state, dispatch }:{ state: IChiBanState, dispatch: React.Dispatch<IChiBanAction> }  = useIchiBanContext();
     const handleChange=(event:React.ChangeEvent<HTMLInputElement>) => {
         dispatch({type: 'UPDATE_KEYWORD', payload: event.target.value})
     }
     const search = () => {
-
+        
     }
     return (
         <>

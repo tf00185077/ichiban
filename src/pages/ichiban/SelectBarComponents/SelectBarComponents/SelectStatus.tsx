@@ -1,8 +1,7 @@
-import { Status } from "./type";
-import { useIchiBanContext } from "@/context/ichiban"
-
+import { StatusLists } from "./type";
+import { useIchiBanContext, IChiBanState, IChiBanAction } from "@/context/ichiban";
 export const SelectStatus = () => {
-    const {state, dispatch}=useIchiBanContext()
+    const { state, dispatch }:{ state: IChiBanState, dispatch: React.Dispatch<IChiBanAction> }  = useIchiBanContext();
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch({ type: 'UPDATE_STATUS', payload: event.target.value });
     };
@@ -14,11 +13,8 @@ export const SelectStatus = () => {
                 onChange={handleChange}
                 value={state.selectedStatus}
             >
-                <option value="">全部狀態</option>
-                {Object.keys(Status).map((key) => (
-                    <option key={key} value={Status[key as keyof typeof Status]}>
-                        <div className="mx-auto">{Status[key as keyof typeof Status]}</div>
-                    </option>
+                {StatusLists.map((item, index)=>(
+                    <option value={item.name_en} key={index}>{item.name_tw}</option>
                 ))}
             </select>
         </>
