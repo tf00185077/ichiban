@@ -5,10 +5,10 @@ import MainCard from "./components/layout/MainCard";
 const App = () => {
   return (
     <>
-      <Header></Header>
-      <MainCard>
-        <Outlet></Outlet>
-      </MainCard>
+        <React.StrictMode>
+            <Header></Header>
+            <Outlet></Outlet>
+        </React.StrictMode>
     </>
   );
 };
