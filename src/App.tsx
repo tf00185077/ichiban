@@ -4,8 +4,10 @@ import Header from "./components/header/Header";
 const App = () => {
   return (
     <>
-      <Header></Header>
-      <Outlet></Outlet>
+        <React.StrictMode>
+            <Header></Header>
+            <Outlet></Outlet>
+        </React.StrictMode>
     </>
   );
 };
