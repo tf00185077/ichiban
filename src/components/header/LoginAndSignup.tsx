@@ -19,9 +19,15 @@ const LoginAndSignup = () => {
             src="src/assets/icon/user-icon.png"
             alt=""
           />
-          <Link to="/login" className="text-shadow">
-            登入/註冊
+          <div className="flex">
+          <Link to="/login" className="text-shadow hover:text-[#f4c221]">
+            登入
           </Link>
+          <p>/</p>
+          <Link to="/signup" className="text-shadow hover:text-[#f4c221]">
+            登入
+          </Link>
+          </div>
         </div>
       </div>
     </>
