@@ -2,7 +2,7 @@ import MainCard from "@/components/layout/MainCard";
 import SignupForm from "@/components/form/SignupForm";
 const Singup = () => {
   return (
-    <MainCard>
+    <>
       <div className="mb-15">首頁/盲盒</div>
       <div className="mt-20 mx-auto max-w-[700px] flex flex-col">
         <p className="text-center">
@@ -13,7 +13,7 @@ const Singup = () => {
         </p>
         <SignupForm></SignupForm>
       </div>
-    </MainCard>
+      </>
   );
 };
 
