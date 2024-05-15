@@ -4,7 +4,7 @@ import LandingPage from "@/pages";
 import App from "@/App";
 import Ichiban from "@/pages/ichiban/index";
 import Login from "@/pages/login/index";
-
+import Singup from "@/pages/signup";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
-      },
+      },{
+        path: "/signup",
+        element: <Singup />
+      }
     ],
   }
 ]);
