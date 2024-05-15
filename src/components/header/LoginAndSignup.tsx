@@ -25,7 +25,7 @@ const LoginAndSignup = () => {
           </Link>
           <p>/</p>
           <Link to="/signup" className="text-shadow hover:text-[#f4c221]">
-            登入
+            註冊
           </Link>
           </div>
         </div>
