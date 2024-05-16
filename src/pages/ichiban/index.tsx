@@ -1,24 +1,19 @@
 import React from "react";
-import { SelectBar } from "./SelectBarComponents/SelectBar";
-import { IChiBanProvider } from "@/context/ichiban";
-import MainCard from "@/components/layout/MainCard";
-import { SelectLists } from "./SelectListsComponents/SelectLists";
+import {SelectButtonBar} from './SelectBarComponents/SelectButtonBar'
+
 const Ichiban = () => {
     return (
         <>
-            <IChiBanProvider>
-                <div className="w-4/5 mx-auto h-full bg-white p-[30px]">
-                    <div className="mb-15">首頁/盲盒</div>
-                    <div className="py-2">
-                        <SelectBar/>
-                    </div>
-                    <div className="py-2">
-                        <hr />
-                    </div>
-                    <div>盲盒結果</div>
-                    <SelectLists/>
+            <div className="w-4/5 mx-auto h-full bg-white p-[30px]">
+                <div className="mb-15">首頁/一極棒</div>
+                <div className="py-2">
+                    <SelectButtonBar/> 
                 </div>
-            </IChiBanProvider>
+                <div className="py-2">
+                    <hr />
+                </div>
+                <div>一極棒</div>
+            </div>
         </>
     )
 
