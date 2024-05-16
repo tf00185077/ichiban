@@ -9,8 +9,12 @@ const Ichiban = () => {
             <IChiBanProvider>
                 <div className="w-4/5 mx-auto h-full bg-white p-[30px]">
                     <div className="mb-15">首頁/盲盒</div>
-                    <SelectBar/>
-                    <hr/>
+                    <div className="py-2">
+                        <SelectBar/>
+                    </div>
+                    <div className="py-2">
+                        <hr />
+                    </div>
                     <div>盲盒結果</div>
                     <SelectLists/>
                 </div>

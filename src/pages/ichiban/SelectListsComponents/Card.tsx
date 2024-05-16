@@ -19,10 +19,23 @@ export const Card: React.FC<{ list: CardListsProps }> = ({ list }) => {
                     </div>
                 </div>
             </div>
-            <div className="p-4">
-                <div className="text-gray-800 font-semibold mb-2">{list.context}</div>
-                <div className="text-gray-600 mb-2">{list.manufacturer}</div>
-                <div className="text-gray-500">剩餘: {list.remaining}</div>
+            <div className="py-4">
+                <div className="p-4">
+                    <div className='flex justify-between items-center'>
+                    <div className="relative inline-block">
+                        <div className="bg-red-500 text-white px-4 py-1 transform   inline-flex items-center">
+                            <div className="custom-skew">
+                                剩餘 3盒
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-yellow-400 text-white font-bold py-1 px-2">
+                        賞翻天
+                    </div>
+                    </div>
+                </div>
+                <div className="p-2 text-gray-800 font-semibold mb-2">{list.context}</div>
+                {/* <div className="text-gray-500">{list.context}</div> */}
             </div>
         </div>
     );
