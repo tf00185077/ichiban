@@ -1,31 +1,31 @@
 import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 
-export type IChiBanState = {
+export type BlindBoxState = {
     selectedStatus: string;
     selectedManufacturer: string;
     searchKeyword: string;
 }
-export type IChiBanAction = 
+export type BlindBoxAction = 
     | { type: 'UPDATE_STATUS'; payload: string }
     | { type: 'UPDATE_MANUFACTURER'; payload: string }
     | { type: 'UPDATE_KEYWORD'; payload: string }
     | { type: 'RESET' };
-export type IChiBanContextType = {
-    state: IChiBanState;
-    dispatch: React.Dispatch<IChiBanAction>;
+export type BlindBoxContextType = {
+    state: BlindBoxState;
+    dispatch: React.Dispatch<BlindBoxAction>;
 }
-const defaultDispatch: React.Dispatch<IChiBanAction> = () => initialState; 
+const defaultDispatch: React.Dispatch<BlindBoxAction> = () => initialState; 
 const initialState = {
     selectedStatus: '',
     selectedManufacturer: '',
     searchKeyword: ''
 };    
-const IChiBanContext = createContext<IChiBanContextType>({
+const BlindBoxContext = createContext<BlindBoxContextType>({
     state: initialState,
     dispatch: defaultDispatch,
 });
 
-function reducer(state: IChiBanState, action: IChiBanAction): IChiBanState {
+function reducer(state: BlindBoxState, action: BlindBoxAction): BlindBoxState {
     switch (action.type) {
         case 'UPDATE_STATUS':
             return { ...state, selectedStatus: action.payload };
@@ -40,19 +40,19 @@ function reducer(state: IChiBanState, action: IChiBanAction): IChiBanState {
     }
 }
 
-interface IChiBanProviderProps {
+interface BlindBoxProviderProps {
     children: ReactNode;
 }
 
-export const IChiBanProvider = ({ children }: IChiBanProviderProps) => {
+export const BlindBoxProvider = ({ children }: BlindBoxProviderProps) => {
     const [state, dispatch] = useReducer(reducer, initialState); 
 
     return (
-        <IChiBanContext.Provider value={{ state, dispatch }}>
+        <BlindBoxContext.Provider value={{ state, dispatch }}>
             {children}
-        </IChiBanContext.Provider>
+        </BlindBoxContext.Provider>
     );
 };
-export const useIchiBanContext = () => {
-    return useContext(IChiBanContext);
+export const useBlindBoxContext = () => {
+    return useContext(BlindBoxContext);
 };

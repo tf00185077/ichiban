@@ -2,9 +2,9 @@
 
 
 import { ManufacturerLists } from "./type"
-import { useIchiBanContext, IChiBanState, IChiBanAction } from "@/context/ichiban";
+import { useBlindBoxContext, BlindBoxState, BlindBoxAction } from "@/context/blindBox";
 export const SelectManufacturer = () => {
-    const { state, dispatch }:{ state: IChiBanState, dispatch: React.Dispatch<IChiBanAction> }  = useIchiBanContext();
+    const { state, dispatch }:{ state: BlindBoxState, dispatch: React.Dispatch<BlindBoxAction> }  = useBlindBoxContext();
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch({ type: 'UPDATE_MANUFACTURER', payload: event.target.value });
     };
