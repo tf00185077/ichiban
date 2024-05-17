@@ -1,8 +1,8 @@
 import React from "react";
-import { SelectBar } from "../blindBox/SelectBarComponents/SelectBar";
+import { SelectBar } from "../../components/BlindBox/SelectBarComponents/SelectBar";
 import { BlindBoxProvider } from "@/context/blindBox";
 import MainCard from "@/components/layout/MainCard";
-import { SelectLists } from "../blindBox/SelectListsComponents/SelectLists";
+import { SelectLists } from "../../components/BlindBox/SelectListsComponents/SelectLists";
 const BlindBox = () => {
     return (
         <>
