@@ -1,5 +1,5 @@
 import React from "react";
-import {SelectButtonBar} from './SelectBarComponents/SelectButtonBar'
+import {SelectButtonBar} from '../../components/IChiBan/SelectBarComponents/SelectButtonBar'
 
 const Ichiban = () => {
     return (

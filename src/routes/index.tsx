@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "@/pages";
 import App from "@/App";
-import Ichiban from "@/pages/iChiban/index";
+import Ichiban from "@/pages/iChiBan/index";
 import Login from "@/pages/login/index";
 import Singup from "@/pages/signup";
 import BlindBox from "@/pages/blindBox";
