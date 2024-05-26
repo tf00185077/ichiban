@@ -9,3 +9,7 @@ Currently, two official plugins are available:
 ---
 - [api swagger](http://54.249.26.196/index.html)
 - [demo web](https://kujiflip.tw/register/)
+---
+test account:
+tf00185076@gmail.com
+Redgodkill0!
