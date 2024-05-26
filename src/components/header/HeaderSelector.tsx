@@ -17,7 +17,7 @@ const HeaderSelector = ({ name,iconName }: { name: keyof typeof routerName,iconN
         className="flex items-center h-[35px] mr-[15px] text-white hover:text-[#f4c221] text-[17.6px] font-bold font-header px-[10px] bg-[#23058C80] hover:bg-[#070137E6] text-shadow rounded-[30px]"
         to={`${routerName[name]}`}
           >
-            <img className="w-[25px] h-[25px]" src={`src/assets/icon/${iconName}.png`} alt="" />
+            <img className="w-[25px] h-[25px]" src={`/src/assets/icon/${iconName}.png`} alt="" />
         {name}
       </Link>
     </>
