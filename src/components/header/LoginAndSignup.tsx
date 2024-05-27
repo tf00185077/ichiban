@@ -6,7 +6,7 @@ const LoginAndSignup = () => {
         <div className="flex items-center justify-center mr-[5px]  w-[62px] bg-[#d04a26] rounded-[30px]">
           <img
             className="w-[14px] h-[14px]"
-            src="src/assets/icon/user-icon.png"
+            src="/src/assets/icon/user-icon.png"
             alt=""
           />
           <Link to="/topUp" className="text-[14.8Linkx]">
@@ -16,7 +16,7 @@ const LoginAndSignup = () => {
         <div className="flex">
           <img
             className="w-[25px] h-[25px]"
-            src="src/assets/icon/user-icon.png"
+            src="/src/assets/icon/user-icon.png"
             alt=""
           />
           <div className="flex">

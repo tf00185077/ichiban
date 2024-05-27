@@ -2,6 +2,7 @@ import React from "react";
 import HeaderSelector from "./HeaderSelector";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginAndSignup from "./LoginAndSignup";
+import AfterLogin from "./AfterLogin";
 const Header = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Header = () => {
           <HeaderSelector name="最新消息" iconName="clock"></HeaderSelector>
         </div>
         <LoginAndSignup></LoginAndSignup>
+        <AfterLogin></AfterLogin>
       </div>
     </>
   );
